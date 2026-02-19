@@ -1,0 +1,170 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "shift",
+  "column_break_1",
+  "supervisor",
+  "start_time",
+  "end_time",
+  "section_break_items",
+  "loom_production_items",
+  "section_break_totals",
+  "total_looms",
+  "column_break_t1",
+  "total_production_meters",
+  "column_break_t2",
+  "total_cuts",
+  "column_break_t3",
+  "average_efficiency",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "LP-.#####",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Shift",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Employee",
+   "fetch_from": "shift.supervisor",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time",
+   "fetch_from": "shift.start_time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time",
+   "fetch_from": "shift.end_time"
+  },
+  {
+   "fieldname": "section_break_items",
+   "fieldtype": "Section Break",
+   "label": "Loom Production Details"
+  },
+  {
+   "fieldname": "loom_production_items",
+   "fieldtype": "Table",
+   "label": "Loom Production Items",
+   "options": "Loom Production Items"
+  },
+  {
+   "fieldname": "section_break_totals",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "total_looms",
+   "fieldtype": "Int",
+   "label": "Total Looms",
+   "read_only": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_t1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_production_meters",
+   "fieldtype": "Float",
+   "label": "Total Production (Meters)",
+   "read_only": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_t2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_cuts",
+   "fieldtype": "Int",
+   "label": "Total Cuts",
+   "read_only": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_t3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "average_efficiency",
+   "fieldtype": "Percent",
+   "label": "Average Efficiency %",
+   "read_only": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Loom Production",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Weaving",
+ "name": "Loom Production",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1, "delete": 1, "email": 1, "export": 1,
+   "print": 1, "read": 1, "report": 1, "role": "System Manager",
+   "share": 1, "submit": 1, "cancel": 1, "amend": 1, "write": 1
+  },
+  {
+   "create": 1, "email": 1, "export": 1,
+   "print": 1, "read": 1, "report": 1, "role": "Accounts User",
+   "share": 1, "submit": 1, "cancel": 1, "amend": 1, "write": 1
+  }
+ ],
+ "sort_field": "date",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "date",
+ "track_changes": 1
+}
