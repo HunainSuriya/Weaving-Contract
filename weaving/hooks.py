@@ -1,63 +1,59 @@
 app_name = "weaving"
 app_title = "Weaving"
-app_publisher = "Your Company"
-app_description = "Weaving Module for ERPNext"
-app_icon = "octicon octicon-file-directory"
-app_color = "grey"
-app_email = "admin@example.com"
+app_publisher = "Open Source"
+app_description = "Generic Weaving Management Module for ERPNext — manage Weaving Contracts, BOM Items, Looms, Shifts and Production across multiple sites."
+app_icon = "octicon octicon-package"
+app_color = "#2490ef"
+app_email = ""
 app_license = "MIT"
+app_version = "1.0.0"
 
-# App includes
 # ----------------------------------------------------------
-
-# include js, css files in header of desk.html
+# App Includes
+# ----------------------------------------------------------
 # app_include_css = "/assets/weaving/css/weaving.css"
-# app_include_js = "/assets/weaving/js/weaving.js"
+# app_include_js  = "/assets/weaving/js/weaving.js"
 
-# DocType Class
-# ---------------
-# Override standard doctype classes
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
-
+# ----------------------------------------------------------
 # Document Events
-# ---------------
-# Hook on document methods and events
+# ----------------------------------------------------------
 doc_events = {
     "Weaving Contract": {
+        "validate":    "weaving.weaving.doctype.weaving_contract.weaving_contract.validate",
         "before_save": "weaving.weaving.doctype.weaving_contract.weaving_contract.before_save",
     },
     "Shift": {
         "validate": "weaving.weaving.doctype.shift.shift.validate",
     },
     "Loom Production": {
-        "validate": "weaving.weaving.doctype.loom_production.loom_production.validate",
+        "validate":    "weaving.weaving.doctype.loom_production.loom_production.validate",
         "before_save": "weaving.weaving.doctype.loom_production.loom_production.before_save",
-    }
+    },
 }
 
+# ----------------------------------------------------------
+# Fixtures — export these with: bench export-fixtures
+# ----------------------------------------------------------
+# fixtures = []
+
+# ----------------------------------------------------------
 # Scheduled Tasks
-# ---------------
-# scheduler_events = {}
-
-# Testing
-# -------
-# before_tests = "weaving.install.before_tests"
-
-# Overriding Methods
-# ------------------------------
-# override_whitelisted_methods = {}
-
-# each overriding function accepts a `data` argument; max allowed return value size is 6MB
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "weaving.event.get_events"
+# ----------------------------------------------------------
+# scheduler_events = {
+#     "daily": ["weaving.tasks.daily"],
 # }
 
-# Permission query conditions for client-side
-# -------------------------------------------
-# permission_query_conditions = {}
+# ----------------------------------------------------------
+# Override Standard DocType Classes
+# ----------------------------------------------------------
+# override_doctype_class = {}
 
-# Function Map
-# ------------------
-# fixtures = []
+# ----------------------------------------------------------
+# Whitelisted Methods
+# ----------------------------------------------------------
+# override_whitelisted_methods = {}
+
+# ----------------------------------------------------------
+# Permission Query Conditions
+# ----------------------------------------------------------
+# permission_query_conditions = {}

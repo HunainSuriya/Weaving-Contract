@@ -5,12 +5,15 @@ with open("requirements.txt") as f:
 
 setup(
     name="weaving",
-    version="0.0.1",
-    description="Weaving Module for ERPNext",
-    author="Your Company",
-    author_email="admin@example.com",
+    version="1.0.0",
+    description="Generic Weaving Management Module for ERPNext",
+    long_description="A multi-site compatible Frappe/ERPNext app for managing Weaving Contracts, BOM Items, Looms, Shifts and Loom Production.",
+    author="Open Source",
+    author_email="",
+    url="",
     packages=find_packages(),
     zip_safe=False,
     include_package_data=True,
     install_requires=install_requires,
+    python_requires=">=3.10",
 )
