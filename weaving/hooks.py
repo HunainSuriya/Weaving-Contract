@@ -17,19 +17,6 @@ app_version = "1.0.0"
 # ----------------------------------------------------------
 # Document Events
 # ----------------------------------------------------------
-doc_events = {
-    "Weaving Contract": {
-        "validate":    "weaving.weaving.doctype.weaving_contract.weaving_contract.validate",
-        "before_save": "weaving.weaving.doctype.weaving_contract.weaving_contract.before_save",
-    },
-    "Shift": {
-        "validate": "weaving.weaving.doctype.shift.shift.validate",
-    },
-    "Loom Production": {
-        "validate":    "weaving.weaving.doctype.loom_production.loom_production.validate",
-        "before_save": "weaving.weaving.doctype.loom_production.loom_production.before_save",
-    },
-}
 
 # ----------------------------------------------------------
 # Fixtures — export these with: bench export-fixtures

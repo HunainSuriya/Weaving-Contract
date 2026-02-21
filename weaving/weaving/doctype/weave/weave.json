@@ -1,0 +1,1 @@
+{"name":"Weave","doctype":"DocType","module":"Weaving","autoname":"field:weave_name","fields":[{"fieldname":"weave_name","fieldtype":"Data","label":"Weave Name","reqd":1,"in_list_view":1}]}

@@ -1,0 +1,1 @@
+{"name":"Selvedge","doctype":"DocType","module":"Weaving","autoname":"field:selvedge_name","fields":[{"fieldname":"selvedge_name","fieldtype":"Data","label":"Selvedge Name","reqd":1,"in_list_view":1}]}

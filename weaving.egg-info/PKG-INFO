@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: weaving
+Version: 1.0.0
+Summary: Generic Weaving Management Module for ERPNext
+Home-page: 
+Author: Open Source
+Author-email: 
+Requires-Python: >=3.10
+Requires-Dist: frappe
+Dynamic: author
+Dynamic: description
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+A multi-site compatible Frappe/ERPNext app for managing Weaving Contracts, BOM Items, Looms, Shifts and Loom Production.
